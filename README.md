@@ -38,7 +38,7 @@ sudo apt install libconfig++-dev
 Clone the git repository, compile and install.
 
 ```bash
-git clone 
+git clone git@github.com:Jeket/daemon-etl.git
 cd cpp-daemon-etl
 mkdir build
 cd build
