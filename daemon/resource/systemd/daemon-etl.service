@@ -1,0 +1,15 @@
+[Unit]
+Description=ETL Daemon
+After=network.taget
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/daemon-etl --config /etc/daemon-etl/daemon-etl.conf
+ExecReload=/bin/kill -HUP $MAINPID
+User=root
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=daemon-etl
+
+[Install]
+WantedBy=multi-user.target
